@@ -66,9 +66,15 @@ public class TestCase1 extends TestCaseBase{
 		}	
 		
 		public static void main(String[] args) {
-			TestCase1 t1 =new TestCase1();
+			//TestCase1 t1 =new TestCase1();
 			//TestCase2 t2 =new TestCase2();
-			t1.verify_login_functionality();
+			TestCase3 t3 =new TestCase3();
+			TestCase4 t4 = new TestCase4();
+			//t1.verify_login_functionality();
+			Login log = new Login();
+			log.login();
+			t3.selectItem();
+			//t4.showCart();
 			//t2.verify_login_page_Visibility();
 			
 		}
