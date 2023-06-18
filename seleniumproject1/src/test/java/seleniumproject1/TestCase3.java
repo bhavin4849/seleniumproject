@@ -13,10 +13,6 @@ public class TestCase3 extends TestCaseBase{
 	public void selectItem()
 	{
 		
-		
-		/*driver.findElement(LoginPage.txt_username).sendKeys("standard_user");
-		driver.findElement(LoginPage.txt_password).sendKeys("secret_sauce");
-		driver.findElement(LoginPage.btn_login).click();*/
 		l.login();
 		driver.findElement(SelectItem.img_link).click();
 		driver.findElement(SelectItem.add_to_cart).click();
