@@ -4,11 +4,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TestCaseBase {
-	WebDriver driver;
+	static WebDriver driver;
 	
 	public void setup()
 	{
-	    driver = new ChromeDriver();
+	    this.driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.saucedemo.com/");
 	}
