@@ -12,9 +12,3 @@ public class Checkout {
 }
 
 
-//driver.findElement(By.xpath("//button[@id='checkout']")).click();
-//driver.findElement(By.xpath("//input[@id='first-name']")).sendKeys("Testf");
-//driver.findElement(By.xpath("//input[@id='last-name']")).sendKeys("Testl");
-//driver.findElement(By.xpath("//input[@id='postal-code']")).sendKeys("123456");
-//driver.findElement(By.xpath("//input[@id='continue']")).click();
-//driver.findElement(By.xpath("//button[@id='finish']")).click();
