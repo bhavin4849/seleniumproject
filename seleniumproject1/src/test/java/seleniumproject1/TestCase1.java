@@ -1,7 +1,9 @@
 package seleniumproject1;
 
 import java.time.Duration;
+import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
+
 
 
 import org.openqa.selenium.By;
@@ -19,12 +21,15 @@ import pageobject.SelectItem;
 import pageobject.ShowCart;
 
 public class TestCase1 extends TestCaseBase{
+	
+		@Test
 		public void verify_login_functionality()
 		{
 			
-			setup();
+			//setup();
 			
 			//TestCase 1 Login
+			
 			driver.findElement(LoginPage.txt_username).sendKeys("standard_user");
 			driver.findElement(LoginPage.txt_password).sendKeys("secret_sauce");
 			driver.findElement(LoginPage.btn_login).click();
@@ -50,8 +55,8 @@ public class TestCase1 extends TestCaseBase{
 			
 			//TestCase 6 Back To Home & Logout
 			driver.findElement(BackHome.back_products).click();
-			driver.findElement(BackHome.click_burger_menu).click();
-			driver.findElement(BackHome.logout).click();
+			//driver.findElement(BackHome.click_burger_menu).click();
+			//driver.findElement(BackHome.logout).click();
 			
 			
 			boolean isDisplayed = driver.findElement(DashboardPageObject.lbl_product).isDisplayed();
@@ -68,14 +73,20 @@ public class TestCase1 extends TestCaseBase{
 		public static void main(String[] args) {
 			//TestCase1 t1 =new TestCase1();
 			//TestCase2 t2 =new TestCase2();
-			TestCase3 t3 =new TestCase3();
-			TestCase4 t4 = new TestCase4();
 			//t1.verify_login_functionality();
+			//t4.showCart();
+			//t2.verify_login_page_Visibility();
+			
+			/*TestCase3 t3 =new TestCase3();
+			TestCase4 t4 = new TestCase4();
+			Checkout1 chk = new Checkout1();
+			
+			
+			
 			Login log = new Login();
 			log.login();
 			t3.selectItem();
-			//t4.showCart();
-			//t2.verify_login_page_Visibility();
+			chk.check();*/
 			
 		}
 
