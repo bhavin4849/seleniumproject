@@ -23,7 +23,7 @@ import pageobject.ShowCart;
 public class TestCase1 extends TestCaseBase{
 	
 		@Test
-		public void verify_login_functionality()
+		public void verify_login_functionality() throws InterruptedException
 		{
 			
 			//setup();
@@ -31,32 +31,46 @@ public class TestCase1 extends TestCaseBase{
 			//TestCase 1 Login
 			
 			driver.findElement(LoginPage.txt_username).sendKeys("standard_user");
+			Thread.sleep(2000);
 			driver.findElement(LoginPage.txt_password).sendKeys("secret_sauce");
+			Thread.sleep(2000);
 			driver.findElement(LoginPage.btn_login).click();
+			Thread.sleep(3000);
 			
 			
 			//TestCase 2 Visibility
 			
 			//TestCase 3 Select Item and Add to Cart
 			driver.findElement(SelectItem.img_link).click();
+			Thread.sleep(3000);
 			driver.findElement(SelectItem.add_to_cart).click();
+			Thread.sleep(5000);
 			
 			//TestCase 4 Go to Cart to show Item
 			driver.findElement(ShowCart.show_cart).click();
+			Thread.sleep(5000);
 			
 			//TestCase 5 Checkout
 			driver.findElement(Checkout.click_checkout).click();
+			Thread.sleep(4000);
 			driver.findElement(Checkout.enter_firstname).sendKeys("Testf");
+			Thread.sleep(2000);
 			driver.findElement(Checkout.enter_lastname).sendKeys("Testl");
+			Thread.sleep(2000);
 			driver.findElement(Checkout.enter_postalcode).sendKeys("123456");
+			Thread.sleep(2000);
 			driver.findElement(Checkout.coninue).click();
+			Thread.sleep(3000);
 			driver.findElement(Checkout.finish).click();
+			Thread.sleep(2000);
 			
 			
 			//TestCase 6 Back To Home & Logout
 			driver.findElement(BackHome.back_products).click();
-			//driver.findElement(BackHome.click_burger_menu).click();
-			//driver.findElement(BackHome.logout).click();
+			Thread.sleep(1000);
+			driver.findElement(BackHome.click_burger_menu).click();
+			Thread.sleep(2000);
+			driver.findElement(BackHome.logout).click();
 			
 			
 			boolean isDisplayed = driver.findElement(DashboardPageObject.lbl_product).isDisplayed();
